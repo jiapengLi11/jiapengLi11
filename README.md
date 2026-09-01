@@ -33,7 +33,45 @@ An end-to-end human-in-the-loop system for recovering missing YOLO labels with m
 
 ---
 
-### 2. VPN Flow Analyst MCP: deterministic evidence for agent workflows
+### 2. Sky Take-Out: production-minded Spring Boot backend
+
+<p align="center">
+  <a href="https://github.com/jiapengLi11/sky-take-out"><img src="https://raw.githubusercontent.com/jiapengLi11/sky-take-out/master/docs/swagger-ui.png" alt="Live Swagger UI" width="58%"></a>
+  <a href="https://github.com/jiapengLi11/sky-take-out"><img src="https://raw.githubusercontent.com/jiapengLi11/sky-take-out/master/docs/test-results.png" alt="Verified Maven test results" width="40%"></a>
+</p>
+
+A Java 17 multi-module administration backend modernized from a learning project into an inspectable delivery case study.
+
+- Replaced committed secrets with environment-driven configuration and documented the credential-rotation boundary.
+- Added BCrypt with successful-login migration from legacy MD5, modern JJWT handling, request IDs, Actuator, Flyway, and OpenAPI.
+- Added H2/MySQL-mode integration tests, Maven Wrapper, GitHub Actions, a non-root Docker image, and health-gated Compose services.
+- Verified `7/7` tests with `0` failures; the committed Swagger screenshot is captured from the running application.
+- Found and fixed a real converter-order bug that Base64-encoded `/v3/api-docs`, then protected the endpoint with a regression test.
+
+[Repository](https://github.com/jiapengLi11/sky-take-out) · [Architecture decisions](https://github.com/jiapengLi11/sky-take-out/blob/master/docs/ARCHITECTURE.md) · [Security notes](https://github.com/jiapengLi11/sky-take-out/blob/master/SECURITY.md)
+
+---
+
+### 3. BERT Similarity: leakage-aware semantic similarity system
+
+<p align="center">
+  <a href="https://github.com/jiapengLi11/BERT-similarity"><img src="https://raw.githubusercontent.com/jiapengLi11/BERT-similarity/master/docs/web-demo.png" alt="Live Chinese STS web interface" width="58%"></a>
+  <a href="https://github.com/jiapengLi11/BERT-similarity"><img src="https://raw.githubusercontent.com/jiapengLi11/BERT-similarity/master/docs/evaluation-results.png" alt="Clean split evaluation results" width="40%"></a>
+</p>
+
+A reproducible Chinese semantic textual similarity service with both an explainable baseline and a BERT-LoRA backend.
+
+- Audits symmetric pair leakage and label conflicts before evaluation, preserving a clean `1,343`-pair test subset.
+- Provides a calibrated TF-IDF character n-gram baseline and a BERT + LoRA model behind the same FastAPI/CLI service contract.
+- BERT-LoRA reaches Pearson `0.8016` and Spearman `0.7933` on the clean split, versus `0.6369` and `0.6337` for the baseline.
+- Includes dynamic padding, gradient accumulation, CUDA-only FP16, clipping, early stopping, model/data cards, Docker, CI, and six passing tests.
+- The UI screenshot is captured from a real API call and displays backend selection, score, interpretation, and latency.
+
+[Repository](https://github.com/jiapengLi11/BERT-similarity) · [Data card](https://github.com/jiapengLi11/BERT-similarity/blob/master/docs/DATA_CARD.md) · [Model card](https://github.com/jiapengLi11/BERT-similarity/blob/master/docs/MODEL_CARD.md)
+
+---
+
+### 4. VPN Flow Analyst MCP: deterministic evidence for agent workflows
 
 <a href="https://github.com/jiapengLi11/vpn-flow-analyst-mcp">
   <img src="https://raw.githubusercontent.com/jiapengLi11/vpn-flow-analyst-mcp/main/docs/architecture.svg" alt="VPN Flow Analyst MCP architecture" width="100%">
@@ -50,7 +88,7 @@ A sanitized FastMCP service and Codex skill that turn flow-level signals into bo
 
 ---
 
-### 3. MACOGA Path Planning: reproducible algorithm engineering
+### 5. MACOGA Path Planning: reproducible algorithm engineering
 
 <a href="https://github.com/jiapengLi11/MACOGA_Path_Planning">
   <img src="https://raw.githubusercontent.com/jiapengLi11/MACOGA_Path_Planning/master/results/05_path_comparison.png" alt="ACO GA simplified path comparison" width="100%">
@@ -67,7 +105,7 @@ A seeded ACO-GA grid path-planning reproduction upgraded with validity checks an
 
 ---
 
-### 4. Insulator Defect Detection: honest experiment preservation
+### 6. Insulator Defect Detection: honest experiment preservation
 
 <a href="https://github.com/jiapengLi11/insulator-detection-yolov5">
   <img src="https://raw.githubusercontent.com/jiapengLi11/insulator-detection-yolov5/main/figures/val_batch0_pred.jpg" alt="Insulator defect validation predictions" width="100%">
@@ -90,6 +128,7 @@ A preserved YOLOv5 single-class defect-detection experiment presented as an audi
 | Data-centric AI | multi-teacher recovery, geometric matching, human review, frozen decisions, derived datasets |
 | Backend engineering | Spring Boot REST API, MySQL/Flyway, JWT/RBAC, transactions, leases, optimistic locking, audit logs |
 | Frontend engineering | Vue 3 + TypeScript collaborative review workflow, shortcuts, image navigation, lease/network status |
+| NLP engineering | Chinese STS, BERT + LoRA, calibrated baselines, leakage-aware evaluation, FastAPI serving |
 | Agent tooling | FastMCP tools, Codex skills, deterministic core/agentic edge, evidence constraints |
 | Algorithm engineering | ACO/GA, seeded experiments, path metrics, regression tests, honest comparisons |
 | Reproducibility | CLI entrypoints, CI, immutable artifacts, real screenshots, documented limits |
@@ -118,8 +157,6 @@ I prefer projects that can answer five questions clearly:
 - [yolo11-luna16-demo](https://github.com/jiapengLi11/yolo11-luna16-demo): chest nodule detection demo with GUI and SAHI.
 - [unet-camvid-segmentation](https://github.com/jiapengLi11/unet-camvid-segmentation): road-scene semantic segmentation experiment.
 - [project11-vit-finetune](https://github.com/jiapengLi11/project11-vit-finetune): Vision Transformer fine-tuning on CIFAR-10.
-- [BERT-similarity](https://github.com/jiapengLi11/BERT-similarity): semantic textual similarity with BERT.
-- [sky-take-out](https://github.com/jiapengLi11/sky-take-out): multi-module Spring Boot backend practice.
 
 ## Contact
 
